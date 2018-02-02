@@ -1,0 +1,5 @@
+com\credibleninja\springbootstarter\credibleapi\Topic.class
+com\credibleninja\springbootstarter\credibleapi\TopicService.class
+com\credibleninja\springbootstarter\credibleapi\TopicController.class
+com\credibleninja\springbootstarter\CredibleNinjaApp.class
+com\credibleninja\springbootstarter\credibleapi\TopicRepository.class
