@@ -19,25 +19,25 @@ public class AadharController {
 	@Autowired
 	private AadharService aadharService;
 
-	@RequestMapping("/aadhars")
-	public List<AadharEntity> getAllTopics() {
+	@RequestMapping("/aadharProfiles")
+	public List<AadharEntity> getAllAadhar() {
 
 		return aadharService.getAllAadhar();
 
 	}
 	
-	@RequestMapping("/aadhars/{id}")
+	@RequestMapping("/aadharProfiles/{id}")
 	public AadharEntity getAadhar(@PathVariable String id){
 		return aadharService.getAadhar(id);
 	}
 	
-	@RequestMapping(method=RequestMethod.POST, value="/aadhars")
+	@RequestMapping(method=RequestMethod.POST, value="/aadharProfiles")
 	public void addAadhar(@RequestBody AadharEntity aadharEntity){
 		aadharService.addAadhar(aadharEntity);
 		
 	}
 	
-	@RequestMapping(method=RequestMethod.PUT, value="/aadhars/{id}")
+	@RequestMapping(method=RequestMethod.PUT, value="/aadharProfiles/{id}")
 	public void updateAadhar(@RequestBody AadharEntity aadharEntity, @PathVariable String id){
 		aadharService.updateAadhar(aadharEntity,id);
 		

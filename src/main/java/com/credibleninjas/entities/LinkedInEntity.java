@@ -10,9 +10,9 @@ public class LinkedInEntity extends AbstractEntity{
 	private String currentDesignation;
 	private String currentOrganization;
 	
-	public LinkedInEntity(String id,String name, Date dateOfBirth, String gender, String address, String currentDesignation,
+	public LinkedInEntity(String cn_id, String name, Date dateOfBirth, String gender, String location, String currentDesignation,
 			String currentOrganization) {
-		super(id,name,dateOfBirth,gender,address);
+		super(cn_id, name,dateOfBirth,gender,location);
 		this.currentDesignation = currentDesignation;
 		this.currentOrganization = currentOrganization;
 	}
@@ -40,8 +40,8 @@ public class LinkedInEntity extends AbstractEntity{
 	
 	@Override
 	public String toString() {
-		return "LinkedInEntity [id=" + id + ", name=" + name + ", dateOfBirth=" + dateOfBirth + ", gender=" + gender
-				+ ", address=" + address + ", currentDesignation=" + currentDesignation
+		return "LinkedInEntity [id=" + cn_id + ", name=" + name + ", dateOfBirth=" + dateOfBirth + ", gender=" + gender
+				+ ", location=" + getLocation() + ", currentDesignation=" + currentDesignation
 				+ ", currentOrganization=" + currentOrganization + "]";
 	}
 }

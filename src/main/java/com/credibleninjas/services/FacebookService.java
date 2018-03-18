@@ -18,21 +18,21 @@ public class FacebookService {
 	
 	public List<FacebookEntity> getAllFacebookProfiles()
 	{
-		// return topics;
+		
 		List<FacebookEntity> facebookProfiles = new ArrayList<FacebookEntity>();
 		facebookRepository.findAll().forEach(facebookProfiles::add);
 		return facebookProfiles;
 	}
 	
 	public FacebookEntity getFacebookProfile(String id){
-		//return topics.stream().filter(t -> t.getId().equals(id)).findFirst().get();
+		
 		return facebookRepository.findOne(id);
 	}
 	
 	
 
 	public void addFacebookProfile(FacebookEntity entity) {
-		//topics.add(topic);
+		
 		facebookRepository.save(entity);
 		
 	}

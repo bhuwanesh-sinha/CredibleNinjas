@@ -2,36 +2,42 @@ package com.credibleninjas.entities;
 
 import java.sql.Date;
 
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 @MappedSuperclass
 public class AbstractEntity {
 
-	   @Id
-	    protected String id;
+		@Id
+		protected String cn_id;
 		protected String name;
 		protected Date dateOfBirth;
 		protected String gender;
-		protected String address;
+		protected String location;
 		
 		public AbstractEntity(){}
 		
-		public AbstractEntity(String id, String name, Date dateOfBirth, String gender, String address) {
+		public AbstractEntity(String cn_id, String name, Date dateOfBirth, String gender, String location) {
 			super();
+			this.cn_id = cn_id;
 			this.name = name;
 			this.dateOfBirth = dateOfBirth;
 			this.gender = gender;
-			this.address = address;
-			this.id = id;
+			this.location = location;
+			
 		}
 		
 		
-		public String getId() {
-			return id;
+		
+
+		public String getCn_id() {
+			return cn_id;
 		}
 
-		public void setId(String id) {
-			this.id = id;
+		public void setCn_id(String cn_id) {
+			this.cn_id = cn_id;
 		}
 
 		public String getName() {
@@ -54,17 +60,17 @@ public class AbstractEntity {
 		}
 		
 
-		public String getAddress() {
-			return address;
+		public String getLocation() {
+			return location;
 		}
-		public void setAddress(String address) {
-			this.address = address;
+		public void setLocation(String location) {
+			this.location = location;
 		}
 		
 		@Override
 		public String toString() {
-			return "AadharEntity [id=" + id + ", name=" + name + ", dateOfBirth=" + dateOfBirth
-					+ ", gender=" + gender + ", address=" + address + "]";
+			return "AadharEntity [cn_id=" + cn_id + ", name=" + name + ", dateOfBirth=" + dateOfBirth
+					+ ", gender=" + gender + ", location=" + location + "]";
 		}
 
 
